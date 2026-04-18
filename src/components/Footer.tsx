@@ -11,7 +11,7 @@ export default function Footer() {
   
   return (
     <footer className="bg-[#4a0d0b]">
-      <section className="w-6xl h-100 pt-20 px-15 m-auto">
+      <section className="container mx-auto px-4 sm:px-6 lg:px-8 h-100 pt-20 px-15 m-auto">
         <nav className="flex flex-col">
           {navItems.map((item) => (
             <Link

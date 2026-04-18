@@ -11,13 +11,12 @@ export default function Modal({ isOpen, onClose, children }: IModalProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
+      className="fixed inset-0 z-[100] w-screen h-screen bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={onClose}
     >
-   
       <div
-        className="bg-white flex flex-col justify-center items-center p-6 rounded-lg shadow-xl max-w-md w-full relative"
-        onClick={(e) => e.stopPropagation()} 
+        className="bg-white flex flex-col items-center p-6 rounded-lg shadow-xl w-full max-w-[90%] sm:max-w-md relative overflow-hidden max-h-[90vh] overflow-y-auto"
+        onClick={(e) => e.stopPropagation()}
       >
         <button
           onClick={onClose}
