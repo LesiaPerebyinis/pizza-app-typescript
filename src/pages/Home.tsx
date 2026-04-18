@@ -1,0 +1,12 @@
+
+import PizaList from '../components/PizaList';
+
+export default function Home() {
+  return (
+    <main className="container mx-auto px-4 sm:px-6 lg:px-8 flex-grow">
+      <section>
+        <PizaList />
+      </section>
+    </main>
+  );
+}
