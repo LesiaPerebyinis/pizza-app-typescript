@@ -1,6 +1,6 @@
-import { type IPiza } from "../features/types/types";
+import { type IPizza } from "../features/types/types";
 
-export const PIZAS_DATA: IPiza[] = [
+export const PIZAS_DATA: IPizza[] = [
 {
     id: 1,
     title: "Піца Пепероні з томатами",
