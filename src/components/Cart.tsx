@@ -1,6 +1,3 @@
-// import React from 'react'
-
-// import { useAppSelector } from "../store/hooks";
 import ItemCart from "./ItemCart";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { removeFromCart, addQuantity, minusQuantity } from "../store/cartSlice";

@@ -1,5 +1,5 @@
 
-import PizaList from '../components/PizaList';
+import PizaList from '../components/PizzaList';
 
 export default function Home() {
   return (

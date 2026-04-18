@@ -1,8 +1,8 @@
 import { MdOutlineDeleteForever } from "react-icons/md";
-import { type ICartPiza } from '../features/types/types';
+import { type ICartPizza } from '../features/types/types';
 import Counter from "./layout/Counter";
 
-interface ItemCartProps extends ICartPiza {
+interface ItemCartProps extends ICartPizza {
   addQuantity: (index: number) => void;
   minusQuantity: (index: number) => void;
   deletePiza: (index: number) => void;
