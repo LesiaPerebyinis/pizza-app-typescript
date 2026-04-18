@@ -1,8 +1,8 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
-import type { ICartPiza } from "../features/types/types";
+import type { ICartPizza } from "../features/types/types";
 
 interface CartState {
-  items: ICartPiza[];
+  items: ICartPizza[];
   totalCost: number;
   totalQuantity: number;
 }
@@ -14,17 +14,17 @@ const initialState: CartState = {
 };
 
 const calcCost = (price: number, num: number) => price * num;
-const calcTotalCost = (arr: ICartPiza[]) =>
+const calcTotalCost = (arr: ICartPizza[]) =>
   arr.reduce((sum, item) => sum + item.cost, 0);
 
-const calcTotalQuantity = (arr: ICartPiza[]) =>
+const calcTotalQuantity = (arr: ICartPizza[]) =>
   arr.reduce((sum, item) => sum + item.quantity, 0);
 
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addToCart: (state, action: PayloadAction<ICartPiza>) => {
+    addToCart: (state, action: PayloadAction<ICartPizza>) => {
       const existingItem = state.items.find(
         (item) => item.id === action.payload.id,
       );
@@ -46,7 +46,7 @@ const cartSlice = createSlice({
       state.totalCost = calcTotalCost(state.items);
       state.totalQuantity = calcTotalQuantity(state.items);
     },
-    addQuantity: (state, action: PayloadAction<ICartPiza>) => {
+    addQuantity: (state, action: PayloadAction<ICartPizza>) => {
       const updateItem = state.items.find(
         (item) => item.id === action.payload.id,
       );
@@ -57,7 +57,7 @@ const cartSlice = createSlice({
         state.totalQuantity = calcTotalQuantity(state.items);
       }
     },
-    minusQuantity: (state, action: PayloadAction<ICartPiza>) => {
+    minusQuantity: (state, action: PayloadAction<ICartPizza>) => {
       const updateItem = state.items.find(
         (item) => item.id === action.payload.id,
       );
