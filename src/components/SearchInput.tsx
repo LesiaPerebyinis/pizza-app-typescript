@@ -16,8 +16,7 @@ export default function SearchInput({ value, deleteValue, handleValue }: ISearch
         onChange={handleValue}
         type="search"
         placeholder="Пошук..."
-        className="border border-dark rounded-md p-3 block w-full text-sm text-gray-900 focus:outline-none focus:ring-1 focus:border-2 focus:border-accent transition-all"
-      
+        className="block w-full p-3 my-7 text-sm text-gray-900 rounded-xl outline-none ring ring-dark bg-white focus:ring-2"
       />
 
       {value && (
