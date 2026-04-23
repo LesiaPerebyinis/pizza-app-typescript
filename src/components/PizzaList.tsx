@@ -19,7 +19,7 @@ export default function PizaList() {
         deleteValue={() => setValue("")}
         handleValue={handleValue}
       />
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-[#4a0d0b]">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-dark">
         {PIZAS_DATA.filter((pizaItem) =>
           (["title", "ingredient"] as const).some((key) => pizaItem[key].toLowerCase().includes(value.toLowerCase()),
           ),

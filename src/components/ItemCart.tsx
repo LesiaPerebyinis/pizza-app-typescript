@@ -21,7 +21,7 @@ export default function ItemCart({
   deletePiza
 }: ItemCartProps) {
   return (
-    <div className="w-full flex items-center gap-1 text-[#4a0d0b] bg-gray-100">
+    <div className="w-full flex items-center gap-1 text-dark bg-gray-100">
       <div className="w-2/10 flex items-center justify-center">
         <img src={src} alt={alt} width={120} height={100} />
       </div>
@@ -42,7 +42,7 @@ export default function ItemCart({
       </div>
       <button
         onClick={() => deletePiza(id)}
-        className="w-1/10 flex justify-center align-center text-[#d9a851] cursor-pointer hover:text-[#b66d3e]"
+        className="w-1/10 flex justify-center align-center text-primery cursor-pointer hover:text-accent"
       >
         <MdOutlineDeleteForever className="w-5 h-5 lg:w-7 lg:h-7" />
       </button>

@@ -17,7 +17,7 @@ export default function Cart() {
         <h2 className="text-center m-5 text-4xl">Кошик порожній!</h2>
       )}
       {totalQuantity > 0 && (
-        <div className="flex flex-col gap-y-5 p-1 lg:p-5 border-1 border-gray-100 my-10">
+        <div className="flex flex-col gap-y-5 p-1 lg:p-5 border border-gray-100 my-10">
           <TableCart
             total=""
             title="Найменування"

@@ -1,1 +1,53 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');@import "tailwindcss";
+
+
+
+@theme {
+  /* Додаємо свій колір */
+  --color-dark: #4a0d0b;
+  --color-primery: #d9a851;
+  --color-accent: #b66d3e;
+  --font-main: "Noto Sans", sans-serif;
+}
+
+@utility my-card {
+  @apply bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-lg transition-shadow;
+}
+
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+@layer base {
+body {
+   @apply font-main text-dark antialiased;
+}
+main {
+  @apply mt-25 mb-10
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+  input[type="search"] {
+    @apply appearance-none outline-none border-none shadow-none bg-transparent;
+  }
+   *, ::before, ::after {
+    border-style: solid;
+  }
+}
+
+
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}

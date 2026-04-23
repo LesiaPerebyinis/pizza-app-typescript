@@ -45,7 +45,7 @@ export default function PizzaCard({
   }
  
   return (
-    <div className="w-full border-1 border-[#4a0d0b] rounded-md p-1">
+    <div className="w-full border border-dark rounded-md p-1">
       <div className="w-full relative">
         <img src={src} alt={alt} />
         <small className="absolute bottom-5 right-4 z-5 bg-gray-200 font-bold rounded-md pr-1 pl-1 opacity-75">
@@ -88,14 +88,14 @@ export default function PizzaCard({
 
       <button
         onClick={() => addPiza(product)}
-        className="w-full bg-[#d9a851] pt-2 pb-2 text-white cursor-pointer hover:bg-[#b66d3e]"
+        className="w-full bg-primery pt-2 pb-2 text-white cursor-pointer hover:bg-[#b66d3e]"
       >
         <div className="flex justify-center align-center text-lg gap-2 font-bold">
           <p> В кошик</p>
           <div className="relative inline-block">
             <MdOutlineShoppingCart size="2em" />
             {quantity > 1 && (
-              <span className="absolute -top-2 -right-3 flex justify-center align-center w-6 h-6 text-[#4a0d0b] bg-white rounded-full text-xs leading-6">
+              <span className="absolute -top-2 -right-3 flex justify-center align-center w-6 h-6 text-dark bg-white rounded-full text-xs leading-6">
                 {quantity}
               </span>
             )}

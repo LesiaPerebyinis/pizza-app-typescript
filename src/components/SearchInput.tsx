@@ -8,19 +8,22 @@ interface ISearchInput {
 
 export default function SearchInput({ value, deleteValue, handleValue }: ISearchInput) {
   return (
-    <div className="relative max-w-md">
+    <div className="relative max-w-md my-7">
+      <label htmlFor="search-input"></label>
       <input
+        id="search-input"
         value={value}
         onChange={handleValue}
         type="search"
         placeholder="Пошук..."
-        className="block w-full p-3 mt-7 mb-7 pl-5ntext-sm text-gray-900 border border-gray-300 rounded-xl appearance-none focus:outline-none focus:ring-1 focus:[#4a0d0b] focus:border-[#4a0d0b] transition-all"
+        className="border border-dark rounded-md p-3 block w-full text-sm text-gray-900 focus:outline-none focus:ring-1 focus:border-2 focus:border-accent transition-all"
+      
       />
 
       {value && (
         <button
           onClick={deleteValue}
-          className="absolute right-3 top-2.5 text-gray-400 hover:text-[#4a0d0b]"
+          className="absolute right-3 top-2.5 text-gray-900 hover:text-dark cursor-pointer"
         >
           ✕
         </button>

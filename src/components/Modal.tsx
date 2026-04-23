@@ -11,7 +11,7 @@ export default function Modal({ isOpen, onClose, children }: IModalProps) {
 
   return createPortal(
     <div
-      className="fixed inset-0 z-[100] w-screen h-screen bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
+      className="fixed inset-0 z-10 w-screen h-screen bg-black/60 backdrop-blur-sm flex items-center justify-center p-4"
       onClick={onClose}
     >
       <div
@@ -20,7 +20,7 @@ export default function Modal({ isOpen, onClose, children }: IModalProps) {
       >
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-[#4a0d0b] hover:text-[#b66d3e]"
+          className="absolute top-2 right-2 text-dark hover:text-accent"
         >
           ✕
         </button>
