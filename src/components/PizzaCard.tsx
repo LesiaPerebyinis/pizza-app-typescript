@@ -2,7 +2,8 @@ import { MdOutlineShoppingCart } from "react-icons/md";
 import { useState } from "react";
 
 import type { IPizza, ICartPizza } from "../features/types/types";
-import Counter from "./layout/Counter";
+import CounterQuantity from "./layout/CounterQuantity";
+import Button from "./ui/Button";
 
 interface PizzaCardProps extends IPizza {
   product: IPizza,
@@ -64,7 +65,7 @@ export default function PizzaCard({
               onClick={() => setSizePizza(ind)}
               className={
                 sizePizza === ind
-                  ? "bg-[#f3f3f2] pt-1 pb-1 rounded-t-xl"
+                  ? "bg-[#f3f3f2] pt-1 pb-1 rounded-t-xl font-semibold"
                   : "pt-2 pb-2 cursor-pointer"
               }
               key={ind}
@@ -74,34 +75,28 @@ export default function PizzaCard({
           ))}
         </div>
         <div className="flex justify-between pt-3 pb-3 pl-7 pr-7 bg-[#f3f3f2]">
-          <Counter
+          <CounterQuantity
             quantity={quantity}
             minusQuantity={minusQuantity}
             addQuantity={addQuantity}
           />
-          <div className="font-bold">
+          <div className="font-semibold">
             {price[sizePizza]}
             <span> грн</span>
           </div>
         </div>
       </div>
-
-      <button
-        onClick={() => addPiza(product)}
-        className="w-full bg-primery pt-2 pb-2 text-white cursor-pointer hover:bg-[#b66d3e]"
-      >
-        <div className="flex justify-center align-center text-lg gap-2 font-bold">
-          <p> В кошик</p>
-          <div className="relative inline-block">
-            <MdOutlineShoppingCart size="2em" />
-            {quantity > 1 && (
-              <span className="absolute -top-2 -right-3 flex justify-center align-center w-6 h-6 text-dark bg-white rounded-full text-xs leading-6">
-                {quantity}
-              </span>
-            )}
-          </div>
+      <Button onClick={() => addPiza(product)} width="100%" height="3.5rem">
+        <p>В кошик</p>
+        <div className="relative inline-block pl-3">
+          <MdOutlineShoppingCart size="2em" />
+          {quantity > 1 && (
+            <span className="absolute -top-2 -right-3 flex justify-center align-center w-6 h-6 text-dark bg-white rounded-full text-xs leading-6">
+              {quantity}
+            </span>
+          )}
         </div>
-      </button>
+      </Button>
     </div>
   );
 }

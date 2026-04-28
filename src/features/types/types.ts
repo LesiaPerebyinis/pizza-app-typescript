@@ -19,7 +19,11 @@ export interface ICartPizza {
   quantity: number;
   cost: number
 }
-
+export interface ICartState {
+  items: ICartPizza[];
+  totalCost: number;
+  totalQuantity: number;
+}
 export interface INavItem {
   id: number;
   title: string;

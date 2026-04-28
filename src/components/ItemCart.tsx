@@ -1,6 +1,7 @@
 import { MdOutlineDeleteForever } from "react-icons/md";
 import { type ICartPizza } from '../features/types/types';
-import Counter from "./layout/Counter";
+// import Counter from "./layout/Counter";
+import CounterQuantity from "./layout/CounterQuantity";
 
 interface ItemCartProps extends ICartPizza {
   addQuantity: (index: number) => void;
@@ -30,8 +31,13 @@ export default function ItemCart({
 
         <small>{size}</small>
       </div>
-      <div className="w-2/10 flex justify-center px-1">
-        <Counter
+      <div className="w-2/10 flex items-center justify-center">
+        {/* <Counter
+          quantity={quantity}
+          minusQuantity={() => minusQuantity(id)}
+          addQuantity={() => addQuantity(id)}
+        /> */}
+        <CounterQuantity
           quantity={quantity}
           minusQuantity={() => minusQuantity(id)}
           addQuantity={() => addQuantity(id)}
@@ -42,7 +48,7 @@ export default function ItemCart({
       </div>
       <button
         onClick={() => deletePiza(id)}
-        className="w-1/10 flex justify-center align-center text-primery cursor-pointer hover:text-accent"
+        className="w-1/10 flex justify-center items-center text-primery cursor-pointer hover:text-accent"
       >
         <MdOutlineDeleteForever className="w-5 h-5 lg:w-7 lg:h-7" />
       </button>
