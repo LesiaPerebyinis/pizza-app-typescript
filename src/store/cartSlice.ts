@@ -1,11 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 import type {ICartPizza, ICartState } from "../features/types/types";
 
-// interface CartState {
-//   items: ICartPizza[];
-//   totalCost: number;
-//   totalQuantity: number;
-// }
 
 const initialState: ICartState = {
   items: [],

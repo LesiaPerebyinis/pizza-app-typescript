@@ -19,8 +19,8 @@ export default function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const OpenModal = () => totalQuantity === 0 && setIsModalOpen(true);
   return (
-    <header className="fixed top-0 left-0 z-7 w-full h-25 bg-white">
-      <nav className="container w-full mx-auto px-4 sm:px-6 lg:px-8 justify-between items-center flex py-4 border-b border-gray-200">
+    <header className="fixed top-0 left-0 z-7 w-full h-27  bg-white">
+      <nav className="container w-full mx-auto px-4 py-4 sm:px-6 lg:px-8 justify-between items-center flex border-b border-gray-200">
         <div className="flex gap-5 ">
           {navItems.map((item) => (
             <NavLink

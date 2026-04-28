@@ -24,7 +24,7 @@ body {
    @apply font-main text-dark antialiased;
 }
 main {
-  @apply mt-25 mb-10
+  @apply mt-27 mb-10
 }
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
